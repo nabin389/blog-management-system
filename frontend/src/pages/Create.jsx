@@ -22,7 +22,8 @@ const Create = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); //prevent the default form submission
-    const response = await axios.post("http://localhost:3000/api/blogs", blog);
+    // const response = await axios.post("http://localhost:3000/api/blogs", blog);
+    const response = await axios.post("https://blog-management-system-xnag.onrender.com/api/blogs", blog);
 
     if(response.status === 200){
       alert("Blog created successfully");

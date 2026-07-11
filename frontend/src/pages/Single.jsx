@@ -16,7 +16,8 @@ const Single = ()=>{
 
   const fetchSingleBlog = async ()=>{//api hit here
     // const response = await axios.get(`http://localhost:3000/api/blogs/${id}`);//this
-    const response = await axios.get(`http://localhost:3000/api/blogs/${id}`);
+    // const response = await axios.get(`http://localhost:3000/api/blogs/${id}`);
+    const response = await axios.get(`https://blog-management-system-xnag.onrender.com/api/blogs/${id}`);
     setBlog(response.data.data);
   }
 
@@ -25,7 +26,8 @@ const Single = ()=>{
   }, []);
 
   const handleDelete = async()=>{
-    await axios.delete(`http://localhost:3000/api/blogs/${id}`)
+    // await axios.delete(`http://localhost:3000/api/blogs/${id}`)
+    await axios.delete(`https://blog-management-system-xnag.onrender.com/api/blogs/${id}`)
     //redirect to homepage after deletion 
     redirect("/home");
   }

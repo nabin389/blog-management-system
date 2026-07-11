@@ -14,8 +14,9 @@ const blogRoutes = require('./routes/blogRoutes');
 const cors = require("cors");
 
 app.use(cors({
-    origin: "http://localhost:5173", //allow requests from this origin
-    optionsSuccessStatus: 200
+    // origin: "http://localhost:5173", //allow requests from this origin
+    // optionsSuccessStatus: 200  
+    origin: "https://blog-management-system-blue.vercel.app"
 }))
 
 // it is used when network issues occurs

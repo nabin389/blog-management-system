@@ -22,7 +22,8 @@ const Update = () => {
 
   const fetchSingleBlog = async () => {
     //api hit here
-    const response = await axios.get(`http://localhost:3000/api/blogs/${id}`);
+    // const response = await axios.get(`http://localhost:3000/api/blogs/${id}`);
+    const response = await axios.get(`https://blog-management-system-xnag.onrender.com/api/blogs/${id}`);
     setBlog(response.data.data);
   };
 
@@ -43,7 +44,8 @@ const Update = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); //prevent the default form submission
-    const response = await axios.patch(`http://localhost:3000/api/blogs/${id}`, blog);
+    // const response = await axios.patch(`http://localhost:3000/api/blogs/${id}`, blog);
+    const response = await axios.patch(`https://blog-management-system-xnag.onrender.com/api/blogs/${id}`, blog);
     // redirect("/home"); //this i have include over here (this doesnot works)
     if(response.status === 200){
     alert("Blog Edited successfully");
