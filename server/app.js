@@ -17,7 +17,7 @@ app.use(cors({
     // origin: "http://localhost:5173", //allow requests from this origin
     // optionsSuccessStatus: 200  
     // origin: "https://blog-management-system-blue.vercel.app",
-    origin: "https://blog-management-system-blue.vercel.app/home",
+    origin: "https://blog-management-system-blue.vercel.app",
     optionsSuccessStatus: 200 
 }))
 
